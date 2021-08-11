@@ -7,11 +7,14 @@
 
 ## Properties
 
-| Property      | Attribute      | Description  | Type                             | Default    |
-| ------------- | -------------- | ------------ | -------------------------------- | ---------- |
-| `buttonLabel` | `button-label` | Button Label | `string`                         | `'Button'` |
-| `disabled`    | `disabled`     |              | `boolean`                        | `false`    |
-| `size`        | `size`         |              | `"large" \| "medium" \| "small"` | `'medium'` |
+| Property      | Attribute      | Description  | Type                                           | Default       |
+| ------------- | -------------- | ------------ | ---------------------------------------------- | ------------- |
+| `buttonLabel` | `button-label` | Button Label | `string`                                       | `'Button'`    |
+| `color`       | `color`        |              | `"primary" \| "secondary"`                     | `'primary'`   |
+| `disabled`    | `disabled`     |              | `boolean`                                      | `false`       |
+| `shape`       | `shape`        |              | `"full" \| "round" \| "smooth"`                | `'smooth'`    |
+| `size`        | `size`         |              | `"large" \| "medium" \| "small"`               | `'medium'`    |
+| `width`       | `width`        |              | `"fullwidth" \| "mediumwidth" \| "smallwidth"` | `'fullwidth'` |
 
 
 ----------------------------------------------

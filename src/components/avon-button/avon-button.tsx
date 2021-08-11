@@ -3,20 +3,23 @@ import clsx from 'clsx';
 
 @Component({
   tag: 'avon-button',
-  styleUrl: 'avon-button.css',
+  styleUrl: 'avon-button.scss',
   shadow: true,
 })
 export class AvonButton {
   /**
    *  Button Label
    */
-  @Prop() buttonLabel: string='Button';
+  @Prop() label: string='Button';
   @Prop({ reflect: true }) disabled?: boolean = false;
   @Prop() size?: 'large' | 'medium' | 'small' = 'medium';
+  @Prop() shape?: 'full' |'round'|'smooth' = 'smooth';
+  @Prop() color?: 'primary' |'secondary'= 'primary';
+  @Prop() width?:'fullwidth' | 'mediumwidth' | 'smallwidth' = 'fullwidth';
 
 
 
   render() {
-    return <button type="button"  class={clsx(`MyButton  ${this.size}`)} disabled={this.disabled}>{this.buttonLabel}</button>;
+    return <button type="button"  class={clsx(`MyButton  ${this.size} ${this.width} ${this.shape} ${this.color}`)} disabled={this.disabled}>{this.label}</button>;
   }
 }

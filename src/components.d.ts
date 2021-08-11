@@ -7,12 +7,15 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AvonButton {
+        "color"?: 'primary' |'secondary';
+        "disabled"?: boolean;
         /**
           * Button Label
          */
-        "buttonLabel": string;
-        "disabled"?: boolean;
+        "label": string;
+        "shape"?: 'full' |'round'|'smooth';
         "size"?: 'large' | 'medium' | 'small';
+        "width"?: 'fullwidth' | 'mediumwidth' | 'smallwidth';
     }
     interface AvonHeading {
         /**
@@ -63,12 +66,15 @@ declare global {
 }
 declare namespace LocalJSX {
     interface AvonButton {
+        "color"?: 'primary' |'secondary';
+        "disabled"?: boolean;
         /**
           * Button Label
          */
-        "buttonLabel"?: string;
-        "disabled"?: boolean;
+        "label"?: string;
+        "shape"?: 'full' |'round'|'smooth';
         "size"?: 'large' | 'medium' | 'small';
+        "width"?: 'fullwidth' | 'mediumwidth' | 'smallwidth';
     }
     interface AvonHeading {
         /**
