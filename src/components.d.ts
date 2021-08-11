@@ -5,14 +5,21 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { Color, Shape } from "./components/globals";
 export namespace Components {
-    interface MyButton {
-        "color"?: Color;
+    interface AvonButton {
+        /**
+          * Button Label
+         */
+        "buttonLabel": string;
         "disabled"?: boolean;
-        "elevation"?: boolean;
-        "shape"?: Shape;
         "size"?: 'large' | 'medium' | 'small';
+    }
+    interface AvonHeading {
+        /**
+          * The first name
+         */
+        "label": string;
+        "level"?: 'h1' | 'h2' | 'h3';
     }
     interface MyComponent {
         /**
@@ -30,11 +37,17 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
+    interface HTMLAvonButtonElement extends Components.AvonButton, HTMLStencilElement {
     }
-    var HTMLMyButtonElement: {
-        prototype: HTMLMyButtonElement;
-        new (): HTMLMyButtonElement;
+    var HTMLAvonButtonElement: {
+        prototype: HTMLAvonButtonElement;
+        new (): HTMLAvonButtonElement;
+    };
+    interface HTMLAvonHeadingElement extends Components.AvonHeading, HTMLStencilElement {
+    }
+    var HTMLAvonHeadingElement: {
+        prototype: HTMLAvonHeadingElement;
+        new (): HTMLAvonHeadingElement;
     };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -43,17 +56,26 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
-        "my-button": HTMLMyButtonElement;
+        "avon-button": HTMLAvonButtonElement;
+        "avon-heading": HTMLAvonHeadingElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyButton {
-        "color"?: Color;
+    interface AvonButton {
+        /**
+          * Button Label
+         */
+        "buttonLabel"?: string;
         "disabled"?: boolean;
-        "elevation"?: boolean;
-        "shape"?: Shape;
         "size"?: 'large' | 'medium' | 'small';
+    }
+    interface AvonHeading {
+        /**
+          * The first name
+         */
+        "label"?: string;
+        "level"?: 'h1' | 'h2' | 'h3';
     }
     interface MyComponent {
         /**
@@ -70,7 +92,8 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
-        "my-button": MyButton;
+        "avon-button": AvonButton;
+        "avon-heading": AvonHeading;
         "my-component": MyComponent;
     }
 }
@@ -78,7 +101,8 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
+            "avon-button": LocalJSX.AvonButton & JSXBase.HTMLAttributes<HTMLAvonButtonElement>;
+            "avon-heading": LocalJSX.AvonHeading & JSXBase.HTMLAttributes<HTMLAvonHeadingElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }

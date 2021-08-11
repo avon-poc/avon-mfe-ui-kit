@@ -25,6 +25,7 @@
     "build-storybook": "build-storybook -c ./.storybook -o ../public"
   },
   "dependencies": {
+    "@pxtrn/storybook-addon-docs-stencil": "^1.0.0",
     "@stencil/core": "^2.0.1",
     "@stencil/sass": "^1.4.0",
     "@storybook/preset-scss": "^1.0.3",
