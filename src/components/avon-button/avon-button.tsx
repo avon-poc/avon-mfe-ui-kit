@@ -15,7 +15,7 @@ export class AvonButton {
   @Prop() size?: 'large' | 'medium' | 'small' = 'medium';
   @Prop() shape?: 'full' |'round'|'smooth' = 'smooth';
   @Prop() color?: 'primary' |'secondary'= 'primary';
-  @Prop() width?:'fullwidth' | 'mediumwidth' | 'smallwidth' = 'fullwidth';
+  @Prop() width?:'fullwidth' | 'mediumwidth' | 'smallwidth' = 'smallwidth';
 
 
 
