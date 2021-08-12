@@ -18,7 +18,7 @@
 
 .MyButton {
   width: 100%;
-  font-weight: 600;
+  font-weight: 800;
   cursor: pointer;
   outline: none;
   display: flex;
@@ -44,21 +44,19 @@
 &.smallwidth{
   width: 25%;
 }
-  
-
   /** Colors **/
   &.primary {
-    background: #1b8df2 0% 0% no-repeat padding-box;
+    background: black 0% 0% no-repeat padding-box;
     border: none;
     color: white;
     transition: 0.3s;
     &:hover,
     &:focus {
-      background-color: #45a3f5;
+      background-color: #7f28c4;
       box-shadow: 3px 4px 6px #a3a3a3;
     }
     &:active {
-      background-color: #0b7de0;
+      background-color: black;
       box-shadow: 3px 4px 6px #a3a3a3;
     }
     &:disabled {
@@ -69,19 +67,18 @@
     }
   }
   &.secondary {
-    background: transparent;
-    border: 1px solid #1b8df2;
-    border-radius: 4px;
-    color: #1b8df2;
+    background: #7f28c4;
+    border:none;
+    color: white;
     transition: 0.3s;
     &:hover,
     &:focus {
-      background-color: #7fbef5;
-      color: #45a3f5;
+      background-color: #6a17ad;
+      color: white;
     }
 
     &:active {
-      background-color: #45a3f5;
+      background-color: #7f28c4;
       color: #45a3f5;
     }
     &:disabled {
@@ -91,7 +88,45 @@
       cursor: not-allowed;
     }
   }
-
+  &.clear {
+    background: none;
+    border: #7f28c4 1px solid;
+    color: #7f28c4;
+    transition: 0.3s;
+    &:hover,
+    &:focus {
+      box-shadow: 3px 4px 6px #a3a3a3;
+    }
+    &:active {
+      background-color:none;
+      box-shadow: 3px 4px 6px #a3a3a3;
+    }
+    &:disabled {
+      background-color: #d6d6d6;
+      color: #a3a3a3;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+  }
+  &.light {
+    background: none;
+    border: black 1px solid;
+    color: black;
+    transition: 0.3s;
+    &:hover,
+    &:focus {
+      box-shadow: 3px 4px 6px #a3a3a3;
+    }
+    &:active {
+      box-shadow: 3px 4px 6px #a3a3a3;
+    }
+    &:disabled {
+      background-color: #d6d6d6;
+      color: #a3a3a3;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+  }
   /** Shape **/
   &.full {
     border-radius: none;

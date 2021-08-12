@@ -7,7 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface AvonButton {
-        "color"?: 'primary' |'secondary';
+        "color"?: 'primary' |'secondary' |'clear' |'light';
         "disabled"?: boolean;
         /**
           * Button Label
@@ -66,7 +66,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface AvonButton {
-        "color"?: 'primary' |'secondary';
+        "color"?: 'primary' |'secondary' |'clear' |'light';
         "disabled"?: boolean;
         /**
           * Button Label

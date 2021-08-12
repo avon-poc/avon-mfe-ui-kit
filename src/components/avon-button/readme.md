@@ -7,14 +7,14 @@
 
 ## Properties
 
-| Property   | Attribute  | Description  | Type                                           | Default        |
-| ---------- | ---------- | ------------ | ---------------------------------------------- | -------------- |
-| `color`    | `color`    |              | `"primary" \| "secondary"`                     | `'primary'`    |
-| `disabled` | `disabled` |              | `boolean`                                      | `false`        |
-| `label`    | `label`    | Button Label | `string`                                       | `'Button'`     |
-| `shape`    | `shape`    |              | `"full" \| "round" \| "smooth"`                | `'smooth'`     |
-| `size`     | `size`     |              | `"large" \| "medium" \| "small"`               | `'medium'`     |
-| `width`    | `width`    |              | `"fullwidth" \| "mediumwidth" \| "smallwidth"` | `'smallwidth'` |
+| Property   | Attribute  | Description  | Type                                             | Default        |
+| ---------- | ---------- | ------------ | ------------------------------------------------ | -------------- |
+| `color`    | `color`    |              | `"clear" \| "light" \| "primary" \| "secondary"` | `'primary'`    |
+| `disabled` | `disabled` |              | `boolean`                                        | `false`        |
+| `label`    | `label`    | Button Label | `string`                                         | `'BUTTON'`     |
+| `shape`    | `shape`    |              | `"full" \| "round" \| "smooth"`                  | `'full'`       |
+| `size`     | `size`     |              | `"large" \| "medium" \| "small"`                 | `'large'`      |
+| `width`    | `width`    |              | `"fullwidth" \| "mediumwidth" \| "smallwidth"`   | `'smallwidth'` |
 
 
 ----------------------------------------------

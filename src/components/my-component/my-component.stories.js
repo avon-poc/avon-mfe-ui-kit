@@ -6,7 +6,3 @@ export default {
     markdown: readme,
   },
 };
-
-export const Default = () => `
-  <my-component first="Millie" middle="Bobby" last="Brown"></my-component>
-`;

@@ -10,11 +10,11 @@ export class AvonButton {
   /**
    *  Button Label
    */
-  @Prop() label: string='Button';
+  @Prop() label: string='BUTTON';
   @Prop({ reflect: true }) disabled?: boolean = false;
-  @Prop() size?: 'large' | 'medium' | 'small' = 'medium';
-  @Prop() shape?: 'full' |'round'|'smooth' = 'smooth';
-  @Prop() color?: 'primary' |'secondary'= 'primary';
+  @Prop() size?: 'large' | 'medium' | 'small' = 'large';
+  @Prop() shape?: 'full' |'round'|'smooth' = 'full';
+  @Prop() color?: 'primary' |'secondary' |'clear' |'light' = 'primary';
   @Prop() width?:'fullwidth' | 'mediumwidth' | 'smallwidth' = 'smallwidth';
 
 
