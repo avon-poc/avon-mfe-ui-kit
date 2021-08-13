@@ -31,8 +31,22 @@ export class AvonLink {
   @Prop() fontsize: string = "12px";
 
 
+  /**
+   * font-family
+   */
+  @Prop() fontfamily: string = "Montserrat,Arial";
+
+  /**
+* font-weight
+*/
+  @Prop() fontweight: string = "100";
+
+
   render() {
-    return <a style={{ 'font-size': this.fontsize, 'text-decoration': this.textdecoration, 'color': this.color }} href={this.link}>{this.label}</a>;
+    return <a style={{
+      'font-size': this.fontsize, 'text-decoration': this.textdecoration, 'color': this.color,
+      'font-weight': this.fontweight, 'font-family': this.fontfamily
+    }} href={this.link}>{this.label}</a>;
   }
 
 }

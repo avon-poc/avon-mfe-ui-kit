@@ -26,8 +26,13 @@ export class SwcLabel {
   */
   @Prop() fontsize: string = "12px";
 
+    /**
+  * font-weight
+  */
+     @Prop() fontweight: string = "100";
+
 
   render() {
-    return <label style={{'color':this.color,'font-size':this.fontsize,'font-family':this.fontfamily}}>{this.label}</label>;
+    return <label style={{'color':this.color,'font-size':this.fontsize,'font-family':this.fontfamily,'font-weight':this.fontweight}}>{this.label}</label>;
   }
 }

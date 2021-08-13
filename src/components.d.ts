@@ -24,6 +24,36 @@ export namespace Components {
         "label": string;
         "level"?: 'h1' | 'h2' | 'h3';
     }
+    interface AvonLink {
+        /**
+          * color
+         */
+        "color": string;
+        /**
+          * font-family
+         */
+        "fontfamily": string;
+        /**
+          * font-size
+         */
+        "fontsize": string;
+        /**
+          * font-weight
+         */
+        "fontweight": string;
+        /**
+          * Label
+         */
+        "label": string;
+        /**
+          * link
+         */
+        "link": string;
+        /**
+          * text-decoration
+         */
+        "textdecoration": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -37,6 +67,42 @@ export namespace Components {
           * The middle name
          */
         "middle": string;
+    }
+    interface SwcBox_container {
+        /**
+          * background-color
+         */
+        "backgroundcolor": string;
+        /**
+          * height
+         */
+        "height": string;
+        /**
+          * Width
+         */
+        "width": string;
+    }
+    interface SwcLabel {
+        /**
+          * color
+         */
+        "color": string;
+        /**
+          * font-family
+         */
+        "fontfamily": string;
+        /**
+          * font-size
+         */
+        "fontsize": string;
+        /**
+          * font-weight
+         */
+        "fontweight": string;
+        /**
+          * Label
+         */
+        "label": string;
     }
 }
 declare global {
@@ -52,16 +118,37 @@ declare global {
         prototype: HTMLAvonHeadingElement;
         new (): HTMLAvonHeadingElement;
     };
+    interface HTMLAvonLinkElement extends Components.AvonLink, HTMLStencilElement {
+    }
+    var HTMLAvonLinkElement: {
+        prototype: HTMLAvonLinkElement;
+        new (): HTMLAvonLinkElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSwcBox_containerElement extends Components.SwcBox_container, HTMLStencilElement {
+    }
+    var HTMLSwcBox_containerElement: {
+        prototype: HTMLSwcBox_containerElement;
+        new (): HTMLSwcBox_containerElement;
+    };
+    interface HTMLSwcLabelElement extends Components.SwcLabel, HTMLStencilElement {
+    }
+    var HTMLSwcLabelElement: {
+        prototype: HTMLSwcLabelElement;
+        new (): HTMLSwcLabelElement;
+    };
     interface HTMLElementTagNameMap {
         "avon-button": HTMLAvonButtonElement;
         "avon-heading": HTMLAvonHeadingElement;
+        "avon-link": HTMLAvonLinkElement;
         "my-component": HTMLMyComponentElement;
+        "swc-box_container": HTMLSwcBox_containerElement;
+        "swc-label": HTMLSwcLabelElement;
     }
 }
 declare namespace LocalJSX {
@@ -83,6 +170,36 @@ declare namespace LocalJSX {
         "label"?: string;
         "level"?: 'h1' | 'h2' | 'h3';
     }
+    interface AvonLink {
+        /**
+          * color
+         */
+        "color"?: string;
+        /**
+          * font-family
+         */
+        "fontfamily"?: string;
+        /**
+          * font-size
+         */
+        "fontsize"?: string;
+        /**
+          * font-weight
+         */
+        "fontweight"?: string;
+        /**
+          * Label
+         */
+        "label"?: string;
+        /**
+          * link
+         */
+        "link"?: string;
+        /**
+          * text-decoration
+         */
+        "textdecoration"?: string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -97,10 +214,49 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface SwcBox_container {
+        /**
+          * background-color
+         */
+        "backgroundcolor"?: string;
+        /**
+          * height
+         */
+        "height"?: string;
+        /**
+          * Width
+         */
+        "width"?: string;
+    }
+    interface SwcLabel {
+        /**
+          * color
+         */
+        "color"?: string;
+        /**
+          * font-family
+         */
+        "fontfamily"?: string;
+        /**
+          * font-size
+         */
+        "fontsize"?: string;
+        /**
+          * font-weight
+         */
+        "fontweight"?: string;
+        /**
+          * Label
+         */
+        "label"?: string;
+    }
     interface IntrinsicElements {
         "avon-button": AvonButton;
         "avon-heading": AvonHeading;
+        "avon-link": AvonLink;
         "my-component": MyComponent;
+        "swc-box_container": SwcBox_container;
+        "swc-label": SwcLabel;
     }
 }
 export { LocalJSX as JSX };
@@ -109,7 +265,10 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "avon-button": LocalJSX.AvonButton & JSXBase.HTMLAttributes<HTMLAvonButtonElement>;
             "avon-heading": LocalJSX.AvonHeading & JSXBase.HTMLAttributes<HTMLAvonHeadingElement>;
+            "avon-link": LocalJSX.AvonLink & JSXBase.HTMLAttributes<HTMLAvonLinkElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "swc-box_container": LocalJSX.SwcBox_container & JSXBase.HTMLAttributes<HTMLSwcBox_containerElement>;
+            "swc-label": LocalJSX.SwcLabel & JSXBase.HTMLAttributes<HTMLSwcLabelElement>;
         }
     }
 }
