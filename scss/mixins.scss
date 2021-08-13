@@ -20,3 +20,15 @@
   --spacer-2xl: #{$spacer-2xl};
   --spacer-3xl: #{$spacer-3xl};
 }
+
+// Media mixins
+@mixin for-mobile {
+  @media (max-width: $desktop-min - 1px) {
+    @content;
+  }
+}
+@mixin for-desktop {
+  @media (min-width: $desktop-min) {
+    @content;
+  }
+}
