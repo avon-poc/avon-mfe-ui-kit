@@ -19,12 +19,12 @@
 
 ### Used by
 
- - [avon-button](../avon-button)
+ - [avon-header](../avon-header)
 
 ### Graph
 ```mermaid
 graph TD;
-  avon-button --> swc-label
+  avon-header --> swc-label
   style swc-label fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

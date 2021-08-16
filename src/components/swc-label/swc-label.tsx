@@ -2,7 +2,7 @@ import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'swc-label',
-  styleUrl: 'swc-label.css',
+  styleUrl: 'swc-label.scss',
   shadow: true,
 })
 export class SwcLabel {

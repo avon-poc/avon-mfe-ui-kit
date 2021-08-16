@@ -1,7 +1,7 @@
 import { configure } from '@storybook/html';
 import buildStencilStories from './stories/automatedStories';
-
 const loader = require('../loader/index.cjs.js');
+
 
 const COLLECTIONS = [
   {
@@ -19,3 +19,4 @@ function loadStories() {
 }
 
 configure(loadStories, module);
+
