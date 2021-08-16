@@ -10,7 +10,7 @@ export class AvonButton {
   /**
    *  Button Label
    */
-  @Prop() label: string='BUTTON';
+  @Prop() label: string='';
   @Prop({ reflect: true }) disabled?: boolean = false;
   @Prop() size?: 'large' | 'medium' | 'small' = 'large';
   @Prop() shape?: 'full' |'round'|'smooth' = 'full';
@@ -20,6 +20,6 @@ export class AvonButton {
 
 
   render() {
-    return <button type="button"  class={clsx(`MyButton  ${this.size} ${this.width} ${this.shape} ${this.color}`)} disabled={this.disabled}>{this.label}</button>;
+    return <button type="button"  class={clsx(`MyButton  ${this.size} ${this.width} ${this.shape} ${this.color}`)} disabled={this.disabled}>{this.label}<slot name="button-label" /></button>;
   }
 }
