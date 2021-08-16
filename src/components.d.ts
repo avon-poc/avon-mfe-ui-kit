@@ -82,6 +82,24 @@ export namespace Components {
          */
         "width": string;
     }
+    interface SwcImg {
+        /**
+          * alt
+         */
+        "alt": string;
+        /**
+          * height
+         */
+        "height": string;
+        /**
+          * src
+         */
+        "src": string;
+        /**
+          * width
+         */
+        "width": string;
+    }
     interface SwcLabel {
         /**
           * color
@@ -103,6 +121,52 @@ export namespace Components {
           * Label
          */
         "label": string;
+    }
+    interface SwcModal {
+        /**
+          * Button color
+         */
+        "btncolor"?: 'primary' |'secondary' |'clear' |'light';
+        /**
+          * button-label
+         */
+        "buttonlabel": string;
+        /**
+          * height
+         */
+        "height": string;
+        /**
+          * Heading
+         */
+        "modaltitle": string;
+        /**
+          * open
+         */
+        "open": boolean;
+        /**
+          * Position of modal
+         */
+        "position"?: 'center' | 'left' | 'right' |'top'|'bottom';
+        /**
+          * Title color
+         */
+        "titlecolor": string;
+        /**
+          * Title font-family
+         */
+        "titlefontfamily": string;
+        /**
+          * Title font-size
+         */
+        "titlefontsize": string;
+        /**
+          * Title font-weight
+         */
+        "titlefontweight": string;
+        /**
+          * width
+         */
+        "width": string;
     }
 }
 declare global {
@@ -136,11 +200,23 @@ declare global {
         prototype: HTMLSwcBox_containerElement;
         new (): HTMLSwcBox_containerElement;
     };
+    interface HTMLSwcImgElement extends Components.SwcImg, HTMLStencilElement {
+    }
+    var HTMLSwcImgElement: {
+        prototype: HTMLSwcImgElement;
+        new (): HTMLSwcImgElement;
+    };
     interface HTMLSwcLabelElement extends Components.SwcLabel, HTMLStencilElement {
     }
     var HTMLSwcLabelElement: {
         prototype: HTMLSwcLabelElement;
         new (): HTMLSwcLabelElement;
+    };
+    interface HTMLSwcModalElement extends Components.SwcModal, HTMLStencilElement {
+    }
+    var HTMLSwcModalElement: {
+        prototype: HTMLSwcModalElement;
+        new (): HTMLSwcModalElement;
     };
     interface HTMLElementTagNameMap {
         "avon-button": HTMLAvonButtonElement;
@@ -148,7 +224,9 @@ declare global {
         "avon-link": HTMLAvonLinkElement;
         "my-component": HTMLMyComponentElement;
         "swc-box_container": HTMLSwcBox_containerElement;
+        "swc-img": HTMLSwcImgElement;
         "swc-label": HTMLSwcLabelElement;
+        "swc-modal": HTMLSwcModalElement;
     }
 }
 declare namespace LocalJSX {
@@ -228,6 +306,24 @@ declare namespace LocalJSX {
          */
         "width"?: string;
     }
+    interface SwcImg {
+        /**
+          * alt
+         */
+        "alt"?: string;
+        /**
+          * height
+         */
+        "height"?: string;
+        /**
+          * src
+         */
+        "src"?: string;
+        /**
+          * width
+         */
+        "width"?: string;
+    }
     interface SwcLabel {
         /**
           * color
@@ -250,13 +346,62 @@ declare namespace LocalJSX {
          */
         "label"?: string;
     }
+    interface SwcModal {
+        /**
+          * Button color
+         */
+        "btncolor"?: 'primary' |'secondary' |'clear' |'light';
+        /**
+          * button-label
+         */
+        "buttonlabel"?: string;
+        /**
+          * height
+         */
+        "height"?: string;
+        /**
+          * Heading
+         */
+        "modaltitle"?: string;
+        "onBtnClick"?: (event: CustomEvent<any>) => void;
+        /**
+          * open
+         */
+        "open"?: boolean;
+        /**
+          * Position of modal
+         */
+        "position"?: 'center' | 'left' | 'right' |'top'|'bottom';
+        /**
+          * Title color
+         */
+        "titlecolor"?: string;
+        /**
+          * Title font-family
+         */
+        "titlefontfamily"?: string;
+        /**
+          * Title font-size
+         */
+        "titlefontsize"?: string;
+        /**
+          * Title font-weight
+         */
+        "titlefontweight"?: string;
+        /**
+          * width
+         */
+        "width"?: string;
+    }
     interface IntrinsicElements {
         "avon-button": AvonButton;
         "avon-heading": AvonHeading;
         "avon-link": AvonLink;
         "my-component": MyComponent;
         "swc-box_container": SwcBox_container;
+        "swc-img": SwcImg;
         "swc-label": SwcLabel;
+        "swc-modal": SwcModal;
     }
 }
 export { LocalJSX as JSX };
@@ -268,7 +413,9 @@ declare module "@stencil/core" {
             "avon-link": LocalJSX.AvonLink & JSXBase.HTMLAttributes<HTMLAvonLinkElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "swc-box_container": LocalJSX.SwcBox_container & JSXBase.HTMLAttributes<HTMLSwcBox_containerElement>;
+            "swc-img": LocalJSX.SwcImg & JSXBase.HTMLAttributes<HTMLSwcImgElement>;
             "swc-label": LocalJSX.SwcLabel & JSXBase.HTMLAttributes<HTMLSwcLabelElement>;
+            "swc-modal": LocalJSX.SwcModal & JSXBase.HTMLAttributes<HTMLSwcModalElement>;
         }
     }
 }
