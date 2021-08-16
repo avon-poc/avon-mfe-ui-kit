@@ -7,10 +7,6 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class AvonLink {
   /**
-   * Label
-   */
-  @Prop() label: string = "Link";
-  /**
   * link
   */
   @Prop() link: string;
@@ -46,7 +42,7 @@ export class AvonLink {
     return <a style={{
       'font-size': this.fontsize, 'text-decoration': this.textdecoration, 'color': this.color,
       'font-weight': this.fontweight, 'font-family': this.fontfamily
-    }} href={this.link}>{this.label}</a>;
+    }} href={this.link}><slot name="link_slot"/></a>;
   }
 
 }

@@ -13,7 +13,7 @@
 | `buttonlabel`     | `buttonlabel`     | button-label      | `string`                                             | `"Go back to shopping"` |
 | `height`          | `height`          | height            | `string`                                             | `"100%"`                |
 | `modaltitle`      | `modaltitle`      | Heading           | `string`                                             | `"Modal title"`         |
-| `open`            | `open`            | open              | `boolean`                                            | `true`                  |
+| `open`            | `open`            | open              | `boolean`                                            | `false`                 |
 | `position`        | `position`        | Position of modal | `"bottom" \| "center" \| "left" \| "right" \| "top"` | `'right'`               |
 | `titlecolor`      | `titlecolor`      | Title color       | `string`                                             | `"black"`               |
 | `titlefontfamily` | `titlefontfamily` | Title font-family | `string`                                             | `"Montserrat,Arial"`    |

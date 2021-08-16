@@ -52,8 +52,9 @@ export class SwcModal {
 */
 @Prop({
   mutable: true,
+  reflect:true
 })
-public open: boolean=true;
+ open: boolean=false;
 /**
 * button-label
 */
@@ -78,7 +79,7 @@ private handleBtnClick = () => {
           <span style={{'color':this.titlecolor,'font-weight':this.titlefontweight,'font-size':this.titlefontsize,'font-family':this.titlefontfamily}}>{this.modaltitle}</span>
           <span class="close" onClick={this.handleCloseClick} >&times;</span>
         </div>
-        <div class="content"><slot /></div>
+        <div class="content"><slot name="modal_content"/></div>
         <div class="button-container">
           <avon-button label={this.buttonlabel} color={this.btncolor} width="fullwidth" size="medium" onClick={this.handleBtnClick}></avon-button>
         </div>

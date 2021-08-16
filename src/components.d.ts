@@ -42,10 +42,6 @@ export namespace Components {
          */
         "fontweight": string;
         /**
-          * Label
-         */
-        "label": string;
-        /**
           * link
          */
         "link": string;
@@ -168,6 +164,13 @@ export namespace Components {
          */
         "width": string;
     }
+    interface SwcTextbox {
+        "disabled"?: boolean;
+        "placeholder"?: string;
+        "shape"?: 'full' |'round'|'smooth';
+        "usecase"?: 'search' |'loginform';
+        "width"?: 'fullwidth' | 'mediumwidth' | 'smallwidth';
+    }
 }
 declare global {
     interface HTMLAvonButtonElement extends Components.AvonButton, HTMLStencilElement {
@@ -218,6 +221,12 @@ declare global {
         prototype: HTMLSwcModalElement;
         new (): HTMLSwcModalElement;
     };
+    interface HTMLSwcTextboxElement extends Components.SwcTextbox, HTMLStencilElement {
+    }
+    var HTMLSwcTextboxElement: {
+        prototype: HTMLSwcTextboxElement;
+        new (): HTMLSwcTextboxElement;
+    };
     interface HTMLElementTagNameMap {
         "avon-button": HTMLAvonButtonElement;
         "avon-heading": HTMLAvonHeadingElement;
@@ -227,6 +236,7 @@ declare global {
         "swc-img": HTMLSwcImgElement;
         "swc-label": HTMLSwcLabelElement;
         "swc-modal": HTMLSwcModalElement;
+        "swc-textbox": HTMLSwcTextboxElement;
     }
 }
 declare namespace LocalJSX {
@@ -265,10 +275,6 @@ declare namespace LocalJSX {
           * font-weight
          */
         "fontweight"?: string;
-        /**
-          * Label
-         */
-        "label"?: string;
         /**
           * link
          */
@@ -393,6 +399,13 @@ declare namespace LocalJSX {
          */
         "width"?: string;
     }
+    interface SwcTextbox {
+        "disabled"?: boolean;
+        "placeholder"?: string;
+        "shape"?: 'full' |'round'|'smooth';
+        "usecase"?: 'search' |'loginform';
+        "width"?: 'fullwidth' | 'mediumwidth' | 'smallwidth';
+    }
     interface IntrinsicElements {
         "avon-button": AvonButton;
         "avon-heading": AvonHeading;
@@ -402,6 +415,7 @@ declare namespace LocalJSX {
         "swc-img": SwcImg;
         "swc-label": SwcLabel;
         "swc-modal": SwcModal;
+        "swc-textbox": SwcTextbox;
     }
 }
 export { LocalJSX as JSX };
@@ -416,6 +430,7 @@ declare module "@stencil/core" {
             "swc-img": LocalJSX.SwcImg & JSXBase.HTMLAttributes<HTMLSwcImgElement>;
             "swc-label": LocalJSX.SwcLabel & JSXBase.HTMLAttributes<HTMLSwcLabelElement>;
             "swc-modal": LocalJSX.SwcModal & JSXBase.HTMLAttributes<HTMLSwcModalElement>;
+            "swc-textbox": LocalJSX.SwcTextbox & JSXBase.HTMLAttributes<HTMLSwcTextboxElement>;
         }
     }
 }
